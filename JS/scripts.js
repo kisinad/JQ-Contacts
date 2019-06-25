@@ -39,10 +39,10 @@ $(document).ready(function(){
 	    	//alert("Name field can not be empty!");  
 	    	Submitted = "false";
 		}
-		
+		if (fname.length!="" && sname.length!="" && tel.length!="" && email.length!=""&& address!="") {
 			var contact = [fname,sname,tel,email,address];
 			allcontacts.push(contact);
-			console.log(allcontacts);
+			console.log(allcontacts);}
 		
 	});
 	// function contact_function(ev) {
@@ -85,7 +85,7 @@ $("#search-id").click(function(event){
  	for (var y=0; y<allcontacts.length; y++){
  		var contactarray = allcontacts[y];
  		if(contactarray[0].includes(phrase)){
-	 		console.log(contactarray);
+	 		console.log(contactarray[0]);
 	 		//document.getElementById("search").innerHTML = contactarray[0];
 	 		statusElm.append(contactarray[0]);
  	}
