@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Contact Form</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="JS/scripts.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="main"> 
+			<div id="content">
+				<div >
+					<h1>Contact Form</h1> 
+				</div>
+				<!-- Create new div contact form -->
+				<div id="divform">
+					<h2>Add a new contact</h2>
+					
+						<label>
+							<small class="rq">*</small>
+							First name:
+							<input type="text" id="fname" name="first_name" placeholder="Your first name">
+
+						</label>
+
+						<label>
+							<small class="rq">*</small>
+							Second name:
+							<input type="text" id="sname" name="second_name" placeholder="Your second name">
+						</label>
+
+						<label>
+							Phone Number:
+							<input type="tel" id="tel" name="phone_number" placeholder="Your phone Number">
+						</label>
+
+						<label>
+							Email:
+							<input type="email" id="email" name="email" placeholder="Your Email">
+						</label>
+
+						<label>
+							Address:
+							<input type="text" id="address" name="address" placeholder="Your Address" >
+						</label>
+						<br>
+							
+						<button type="submit" id="save-id" >
+							Save
+						</button>
+						<div class="status"></div>
+						
+					
+					
+
+				</div>
+				<!-- Create new search field form -->
+				<div id="search">
+					<h2>Search contact</h2>
+					
+	  					<input type="text" id="search-id" placeholder="Enter Contact name.." name="search">
+	  					<div id="contactFields"></div>
+	  					<br>
+	  					<button type="submit" id="search-id" >Search</button>
+	  					<div class="search_result"></div>
+	  					<!-- <input type = "text" id = "txtOutput" /> -->
+					
+
+
+				</div>
+			</div>
+		</div>
+			
+		
+		
+	</body>
+
+</html>
