@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 	// Function stores variable on clicking save
 	$("#save-id").click(function(event){
-		event.preventDefautl();
+		//event.preventDefautl();
 		var fname = $("#fname").val();
 		var sname = $("#sname").val();
 		var tel = $("#tel").val();
@@ -20,9 +20,9 @@ $(document).ready(function(){
 		var statusElm = $(".status");
 		statusElm.empty();
 
-		if(email.length>5 && email.includes("@") && email.includes("."))
-			else
-				statusElm.append("<div> Email is not Valid</div>");
+		// if(email.length>5 && email.includes("@") && email.includes("."))
+		// 	else
+		// 		statusElm.append("<div> Email is not Valid</div>");
 
 		if (fname.length > 10 ) {
 			statusElm.append("<div> The First name must have no more than 10 characters</div>");
@@ -39,12 +39,11 @@ $(document).ready(function(){
 	    	//alert("Name field can not be empty!");  
 	    	Submitted = "false";
 		}
-		else{
+		
 			var contact = [fname,sname,tel,email,address];
 			allcontacts.push(contact);
 			console.log(allcontacts);
-		}
-
+		
 	});
 	// function contact_function(ev) {
 	// // ev.preventDefautl();
@@ -77,24 +76,25 @@ $(document).ready(function(){
 	//alert("Saved!");
 	//alert(array[0]);
 	
-
-}
-//Function to search through saved contacts
 $("#search-id").click(function(event){
-	event.preventDefautl();
+	//event.preventDefautl();
 	//function search_function(){
 	var phrase = $("#search-id").val();
+	var statusElm = $(".search_result");
 	//var phrase = document.querySelector("#search-id").value;
  	for (var y=0; y<allcontacts.length; y++){
  		var contactarray = allcontacts[y];
  		if(contactarray[0].includes(phrase)){
 	 		console.log(contactarray);
 	 		//document.getElementById("search").innerHTML = contactarray[0];
-	 		statusElm.append("<div>"contactarray[0]"</div>")
+	 		statusElm.append(contactarray[0]);
  	}
 
  }
-}
+	});
+});
+//Function to search through saved contacts
+
 // }
 // function search_function(){
 // var phrase = document.querySelector("#search-id").value;
@@ -120,4 +120,4 @@ $("#search-id").click(function(event){
 
 
 
-});
+// });
